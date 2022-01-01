@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Bills</title>
+    <!-- base:css -->
+    <link
+      rel="stylesheet"
+      href="../../vendors/typicons.font/font/typicons.css"
+    />
+    <link rel="stylesheet" href="../../vendors/css/vendor.bundle.base.css" />
+    <!-- endinject -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="../../css/vertical-layout-light/style.css" />
+    <!-- endinject -->
+    <link rel="shortcut icon" href="../../images/favicon.png" />
+    <!-- <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    /> -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
+  </head>
+
+  <body>
+    <div class="container-scroller">
+      <!-- partial:partials/_navbar.html -->
+      <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+        <div
+          class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center"
+        >
+          <a class="navbar-brand brand-logo" href="index.html"
+            ><img src="../../images/logo.svg" alt="logo"
+          /></a>
+          <a class="navbar-brand brand-logo-mini" href="index.html"
+            ><img src="../../images/logo-mini.svg" alt="logo"
+          /></a>
+          <button
+            class="navbar-toggler navbar-toggler align-self-center d-none d-lg-flex"
+            type="button"
+            data-toggle="minimize"
+          >
+            <span class="typcn typcn-th-menu"></span>
+          </button>
+        </div>
+        <div
+          class="navbar-menu-wrapper d-flex align-items-center justify-content-end"
+        >
+          <ul class="navbar-nav navbar-nav-right">
+            <li class="nav-item nav-profile dropdown">
+              <a
+                class="nav-link dropdown-toggle pl-0 pr-0"
+                href="#"
+                data-toggle="dropdown"
+                id="profileDropdown"
+              >
+                <i class="typcn typcn-user-outline mr-0"></i>
+                <span class="nav-profile-name">Evan Morales</span>
+              </a>
+              <div
+                class="dropdown-menu dropdown-menu-right navbar-dropdown"
+                aria-labelledby="profileDropdown"
+              >
+                <a class="dropdown-item cursor-pointer">
+                  <i class="typcn typcn-cog text-primary"></i>
+                  Settings
+                </a>
+                <a class="dropdown-item">
+                  <i class="typcn typcn-power text-primary"></i>
+                  Logout
+                </a>
+              </div>
+            </li>
+          </ul>
+          <button
+            class="navbar-toggler navbar-toggler-right d-lg-none align-self-center"
+            type="button"
+            data-toggle="offcanvas"
+          >
+            <span class="typcn typcn-th-menu"></span>
+          </button>
+        </div>
+      </nav>
+      <!-- partial -->
+      <div class="container-fluid page-body-wrapper">
+        <!-- partial -->
+        <!-- partial:partials/_sidebar.html -->
+        <nav class="sidebar sidebar-offcanvas" id="sidebar">
+          <ul class="nav">
+            <li class="nav-item">
+              <div class="d-flex sidebar-profile">
+                <div class="sidebar-profile-image">
+                  <img src="../../images/faces/face29.png" alt="image" />
+                  <span class="sidebar-status-indicator"></span>
+                </div>
+                <div class="sidebar-profile-name">
+                  <p class="sidebar-name">Kenneth Osborne</p>
+                  <p class="sidebar-designation">Welcome</p>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">
+                <i class="typcn typcn-device-desktop menu-icon"></i>
+                <span class="menu-title">Dashboard </span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="./pages/bills/bills.html"
+                aria-expanded="false"
+                aria-controls="ui-basic"
+              >
+                <i class="typcn typcn-briefcase menu-icon"></i>
+                <span class="menu-title">Show Bill</span>
+                <i class="typcn typcn-chevron-right menu-arrow"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                data-toggle="collapse"
+                href="#form-elements"
+                aria-expanded="false"
+                aria-controls="form-elements"
+              >
+                <i class="typcn typcn-film menu-icon"></i>
+                <span class="menu-title">Form elements</span>
+                <i class="menu-arrow"></i>
+              </a>
+              <div class="collapse" id="form-elements">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item">
+                    <a
+                      class="nav-link"
+                      href="../../pages/forms/basic_elements.html"
+                      >Basic Elements</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                data-toggle="collapse"
+                href="#charts"
+                aria-expanded="false"
+                aria-controls="charts"
+              >
+                <i class="typcn typcn-chart-pie-outline menu-icon"></i>
+                <span class="menu-title">Charts</span>
+                <i class="menu-arrow"></i>
+              </a>
+              <div class="collapse" id="charts">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../../pages/charts/chartjs.html"
+                      >ChartJs</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                data-toggle="collapse"
+                href="#tables"
+                aria-expanded="false"
+                aria-controls="tables"
+              >
+                <i class="typcn typcn-th-small-outline menu-icon"></i>
+                <span class="menu-title">Tables</span>
+                <i class="menu-arrow"></i>
+              </a>
+              <div class="collapse" id="tables">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item">
+                    <a
+                      class="nav-link"
+                      href="../../pages/tables/basic-table.html"
+                      >Basic table</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                data-toggle="collapse"
+                href="#icons"
+                aria-expanded="false"
+                aria-controls="icons"
+              >
+                <i class="typcn typcn-compass menu-icon"></i>
+                <span class="menu-title">Icons</span>
+                <i class="menu-arrow"></i>
+              </a>
+              <div class="collapse" id="icons">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../../pages/icons/mdi.html"
+                      >Mdi icons</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                data-toggle="collapse"
+                href="#auth"
+                aria-expanded="false"
+                aria-controls="auth"
+              >
+                <i class="typcn typcn-user-add-outline menu-icon"></i>
+                <span class="menu-title">User Pages</span>
+                <i class="menu-arrow"></i>
+              </a>
+              <div class="collapse" id="auth">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../../pages/samples/login.html">
+                      Login
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link"
+                      href="../../pages/samples/register.html"
+                    >
+                      Register
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                data-toggle="collapse"
+                href="#error"
+                aria-expanded="false"
+                aria-controls="error"
+              >
+                <i class="typcn typcn-globe-outline menu-icon"></i>
+                <span class="menu-title">Error pages</span>
+                <i class="menu-arrow"></i>
+              </a>
+              <div class="collapse" id="error">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item">
+                    <a
+                      class="nav-link"
+                      href="../../pages/samples/error-404.html"
+                    >
+                      404
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link"
+                      href="../../pages/samples/error-500.html"
+                    >
+                      500
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="../../pages/documentation/documentation.html"
+              >
+                <i class="typcn typcn-document-text menu-icon"></i>
+                <span class="menu-title">Documentation</span>
+              </a>
+            </li>
+          </ul>
+          <ul class="sidebar-legend">
+            <li>
+              <p class="sidebar-menu-title">Category</p>
+            </li>
+            <li class="nav-item"><a href="#" class="nav-link">#Sales</a></li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">#Marketing</a>
+            </li>
+            <li class="nav-item"><a href="#" class="nav-link">#Growth</a></li>
+          </ul>
+        </nav>
+        <!-- partial -->
+        <div class="main-panel">
+          <div class="content-wrapper">
+            <div class="row">
+              <div class="col-lg-12 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">All Bills</h4>
+                    <p class="card-description">
+                      Add class <code>.table-hover</code>
+                    </p>
+                    <div class="table-responsive">
+                      <table class="table table-hover" id="data">
+                        <thead>
+                          <tr>
+                            <th>User</th>
+                            <th>Product</th>
+                            <th>Sale</th>
+                            <th>Status</th>
+                            <th>Bill Status</th>
+                            <th>Options</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Jacob</td>
+                            <td>Photoshop</td>
+                            <td class="text-danger">
+                              28.76%
+                              <i class="typcn typcn-arrow-sorted-down"></i>
+                            </td>
+                            <td>
+                              <label class="badge badge-danger">Pending</label>
+                            </td>
+                            <td>
+                              <label class="badge badge-danger">Pending</label>
+                            </td>
+                            <td>
+                              <div class="dropdown">
+                                <button
+                                  class="btn btn-light dropdown-toggle btn-sm"
+                                  type="button"
+                                  id="dropdownMenuIconButton1"
+                                  data-toggle="dropdown"
+                                  aria-haspopup="true"
+                                  aria-expanded="false"
+                                >
+                                  <i class="typcn typcn-cog"></i>
+                                </button>
+                                <div
+                                  class="dropdown-menu"
+                                  aria-labelledby="dropdownMenuIconButton1"
+                                >
+                                  <a class="dropdown-item" href="#">
+                                    <i class="typcn typcn-edit"></i> Edit</a
+                                  >
+                                  <a
+                                    class="dropdown-item"
+                                    href="#"
+                                    onclick="deleteRow(this)"
+                                  >
+                                    <i class="typcn typcn-delete"></i> Delete</a
+                                  >
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Messsy</td>
+                            <td>Flash</td>
+                            <td class="text-danger">
+                              21.06%
+                              <i class="typcn typcn-arrow-sorted-down"></i>
+                            </td>
+                            <td>
+                              <label class="badge badge-warning"
+                                >In progress</label
+                              >
+                            </td>
+                            <td>
+                              <label class="badge badge-warning"
+                                >In progress</label
+                              >
+                            </td>
+                            <td>
+                              <div class="dropdown">
+                                <button
+                                  class="btn btn-light dropdown-toggle btn-sm"
+                                  type="button"
+                                  id="dropdownMenuIconButton1"
+                                  data-toggle="dropdown"
+                                  aria-haspopup="true"
+                                  aria-expanded="false"
+                                >
+                                  <i class="typcn typcn-cog"></i>
+                                </button>
+                                <div
+                                  class="dropdown-menu"
+                                  aria-labelledby="dropdownMenuIconButton1"
+                                >
+                                  <a class="dropdown-item" href="#">
+                                    <i class="typcn typcn-edit"></i> Edit</a
+                                  >
+                                  <a
+                                    class="dropdown-item"
+                                    href="#"
+                                    onclick="deleteRow(this)"
+                                  >
+                                    <i class="typcn typcn-delete"></i> Delete</a
+                                  >
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>John</td>
+                            <td>Premier</td>
+                            <td class="text-danger">
+                              35.00%
+                              <i class="typcn typcn-arrow-sorted-down"></i>
+                            </td>
+                            <td>
+                              <label class="badge badge-info">Fixed</label>
+                            </td>
+                            <td>
+                              <label class="badge badge-info">Fixed</label>
+                            </td>
+                            <td>
+                              <div class="dropdown">
+                                <button
+                                  class="btn btn-light dropdown-toggle btn-sm"
+                                  type="button"
+                                  id="dropdownMenuIconButton1"
+                                  data-toggle="dropdown"
+                                  aria-haspopup="true"
+                                  aria-expanded="false"
+                                >
+                                  <i class="typcn typcn-cog"></i>
+                                </button>
+                                <div
+                                  class="dropdown-menu"
+                                  aria-labelledby="dropdownMenuIconButton1"
+                                >
+                                  <a class="dropdown-item" href="#">
+                                    <i class="typcn typcn-edit"></i> Edit</a
+                                  >
+                                  <a
+                                    class="dropdown-item"
+                                    href="#"
+                                    onclick="deleteRow(this)"
+                                  >
+                                    <i class="typcn typcn-delete"></i> Delete</a
+                                  >
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Peter</td>
+                            <td>After effects</td>
+                            <td class="text-success">
+                              82.00% <i class="typcn typcn-arrow-sorted-up"></i>
+                            </td>
+                            <td>
+                              <label class="badge badge-success"
+                                >Completed</label
+                              >
+                            </td>
+                            <td>
+                              <label class="badge badge-success"
+                                >Completed</label
+                              >
+                            </td>
+                            <td>
+                              <div class="dropdown">
+                                <button
+                                  class="btn btn-light dropdown-toggle btn-sm"
+                                  type="button"
+                                  id="dropdownMenuIconButton1"
+                                  data-toggle="dropdown"
+                                  aria-haspopup="true"
+                                  aria-expanded="false"
+                                >
+                                  <i class="typcn typcn-cog"></i>
+                                </button>
+                                <div
+                                  class="dropdown-menu"
+                                  aria-labelledby="dropdownMenuIconButton1"
+                                >
+                                  <a class="dropdown-item" href="#">
+                                    <i class="typcn typcn-edit"></i> Edit</a
+                                  >
+                                  <a
+                                    class="dropdown-item"
+                                    href="#"
+                                    onclick="deleteRow(this)"
+                                  >
+                                    <i class="typcn typcn-delete"></i> Delete</a
+                                  >
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Dave</td>
+                            <td>53275535</td>
+                            <td class="text-success">
+                              98.05% <i class="typcn typcn-arrow-sorted-up"></i>
+                            </td>
+                            <td>
+                              <label class="badge badge-warning"
+                                >In progress</label
+                              >
+                            </td>
+                            <td>
+                              <label class="badge badge-warning"
+                                >In progress</label
+                              >
+                            </td>
+                            <td>
+                              <div class="dropdown">
+                                <button
+                                  class="btn btn-light dropdown-toggle btn-sm"
+                                  type="button"
+                                  id="dropdownMenuIconButton1"
+                                  data-toggle="dropdown"
+                                  aria-haspopup="true"
+                                  aria-expanded="false"
+                                >
+                                  <i class="typcn typcn-cog"></i>
+                                </button>
+                                <div
+                                  class="dropdown-menu"
+                                  aria-labelledby="dropdownMenuIconButton1"
+                                >
+                                  <a class="dropdown-item" href="#">
+                                    <i class="typcn typcn-edit"></i> Edit</a
+                                  >
+                                  <a
+                                    class="dropdown-item"
+                                    href="#"
+                                    onclick="deleteRow(this)"
+                                  >
+                                    <i class="typcn typcn-delete"></i> Delete</a
+                                  >
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <ul
+                        class="pagination justify-content-center"
+                        id="paginationNavbar"
+                      ></ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- content-wrapper ends -->
+          <!-- partial:../../partials/_footer.html -->
+          <footer class="footer">
+            <div
+              class="d-sm-flex justify-content-center justify-content-sm-between"
+            >
+              <span class="text-center text-sm-left d-block d-sm-inline-block"
+                >Copyright ©
+                <a
+                  href="https://www.boring-kare-43feb9.netlify.app/#home"
+                  target="_blank"
+                  >BitProblems</a
+                >
+                2020</span
+              >
+              <span
+                class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center"
+                ><a
+                  href="https://www.boring-kare-43feb9.netlify.app/#home"
+                  target="_blank"
+                  >Inventory System </a
+                >by BitProblems</span
+              >
+            </div>
+          </footer>
+          <!-- partial -->
+        </div>
+        <!-- main-panel ends -->
+      </div>
+      <!-- page-body-wrapper ends -->
+    </div>
+    <!-- container-scroller -->
+    <!-- base:js -->
+    <script type="text/javascript">
+      const deleteRow = (row) => {
+        // get the "<tr>" that is the parent of the clicked button
+        var row = row.parentNode.parentNode.parentNode.parentNode;
+        row.parentNode.removeChild(row); // remove the row
+      };
+    </script>
+    <script src="../../vendors/js/vendor.bundle.base.js"></script>
+    <!-- endinject -->
+    <!-- Plugin js for this page-->
+    <!-- End plugin js for this page-->
+    <!-- inject:js -->
+    <script src="../../js/off-canvas.js"></script>
+    <script src="../../js/hoverable-collapse.js"></script>
+    <script src="../../js/template.js"></script>
+    <script src="../../js/settings.js"></script>
+    <script src="../../js/todolist.js"></script>
+
+    <!-- endinject -->
+    <!-- plugin js for this page -->
+    <!-- End plugin js for this page -->
+    <!-- Custom js for this page-->
+    <!-- End custom js for this page-->
+    <script type="text/javascript">
+      $(document).ready(function () {
+        // $("#data").after('<ul class="pagination" id="nav"></ul>');
+        var rowsShown = 4;
+        var rowsTotal = $("#data tbody tr").length;
+        var numPages = rowsTotal / rowsShown;
+        for (i = 0; i < numPages; i++) {
+          var pageNum = i + 1;
+
+          $("#paginationNavbar").append(
+            `<li class="page-item" > <a href="#" class="page-link" rel="` +
+              i +
+              '">' +
+              pageNum +
+              "</a> </li>"
+          );
+        }
+        $("#data tbody tr").hide();
+        $("#data tbody tr").slice(0, rowsShown).show();
+        $("#paginationNavbar a:first").addClass("active");
+        $("#paginationNavbar a").bind("click", function () {
+          $("#nav a").removeClass("active");
+          $(this).addClass("active");
+          var currPage = $(this).attr("rel");
+          var startItem = currPage * rowsShown;
+          var endItem = startItem + rowsShown;
+          $("#data tbody tr")
+            .css("opacity", "0.0")
+            .hide()
+            .slice(startItem, endItem)
+            .css("display", "table-row")
+            .animate({ opacity: 1 }, 300);
+        });
+      });
+    </script>
+  </body>
+</html>
